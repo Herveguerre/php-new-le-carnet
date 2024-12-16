@@ -1,0 +1,167 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+main {
+   
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+/* Tableau de bord */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: clamp(250px, 30%, 350px);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    background: #fff;
+    color: #4caf50;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.card a:hover {
+    background: #4caf50;
+    color: #fff;
+}
+
+/* Message de confirmation */
+.message {
+    background: #4caf50;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Gestion des commentaires */
+.gestion-commentaires {
+    margin-top: 3rem;
+}
+
+.gestion-commentaires h2, 
+.gestion-commentaires h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.commentaires-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.commentaires-list li {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.commentaires-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.commentaires-list strong {
+    color: #4caf50;
+}
+
+.commentaires-list form {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.commentaires-list button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.commentaires-list button:hover {
+    background: #388e3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+    main{
+        margin-left: -50px;
+    }
+}

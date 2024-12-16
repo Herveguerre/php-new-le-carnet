@@ -1,0 +1,37 @@
+[
+    {
+        "section": "presentation",
+        "title": "HG Developpement ",
+        "content": "vous ne serez pas de\u00e7u ",
+        "image": "1733913595-G.webp",
+        "position": 1,
+        "members": []
+    },
+    {
+        "section": "activity",
+        "title": "activity",
+        "content": "ryshgw \r\nryedtsh",
+        "image": "",
+        "members": [],
+        "position": 2
+    },
+    {
+        "section": "team",
+        "title": "notre \u00e9quipe ",
+        "content": "elle est l\u00e0 pour vous aider",
+        "image": "",
+        "position": 2,
+        "members": [
+            {
+                "name": "angelique",
+                "role": "chef d'amour ",
+                "photo": "1733913517-intru.png"
+            },
+            {
+                "name": "herve",
+                "role": "dhef",
+                "photo": "1734188606-partie_1 (2).png"
+            }
+        ]
+    }
+]

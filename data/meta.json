@@ -1,0 +1,22 @@
+{
+    "index": {
+        "title": "Accueil",
+        "meta_description": "Bienvenue sur notre site web. Découvrez nos services et produits."
+    },
+    "produits": {
+        "title": "Produits",
+        "meta_description": "Explorez notre gamme de produits variés et de qualité."
+    },
+    "services": {
+        "title": "Services",
+        "meta_description": "Nos services sont conçus pour répondre à vos besoins."
+    },
+    "contact": {
+        "title": "Contact",
+        "meta_description": "Contactez-nous pour toute question ou demande."
+    },
+    "about": {
+        "title": "À propos",
+        "meta_description": "Apprenez-en davantage sur notre entreprise et notre mission."
+    }
+}

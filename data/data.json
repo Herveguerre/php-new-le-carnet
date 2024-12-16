@@ -1,0 +1,60 @@
+{
+    "site_name": "nom de ma boite",
+    "email": "herveguerre@hotmail.fr",
+    "address": "69 rue du garde \u00e0 vous. 75001 Paris cedex",
+    "phone": "02 39 70 82 56",
+    "logo": "logo.png",
+    "description_site": "site de recttes super facile",
+    "blog_enabled": true,
+    "galerie_enabled": true,
+    "commentaires_enabled": true,
+    "hero_images_enabled": false,
+    "tarifs_enabled": true,
+    "opening_hours": "lundi au vendredi \r\nde 9h \u00e0 12h \r\net de 13h30 \u00e0 19h ",
+    "socials": [
+        {
+            "name": "facebook",
+            "link": "https:\/\/www.facebook.com",
+            "logo": "facebook (1).png"
+        },
+        {
+            "name": "twitter",
+            "link": "https:\/\/www.twitter.com\/",
+            "logo": "twitter.png"
+        },
+        {
+            "name": "instagram",
+            "link": "https:\/\/www.instagram.com\/",
+            "logo": "instagram (1).png"
+        }
+    ],
+    "services": {
+        "title": "Nos services",
+        "cards": [
+            {
+                "title": "card  1",
+                "description": "des",
+                "link": ""
+            },
+            {
+                "title": "card  2",
+                "description": "des 2",
+                "link": "https:\/\/www.amazon.fr\/"
+            },
+            {
+                "title": "decouvez notre plus beau produit ",
+                "description": "vous ne serze pas de\u00e7u pas ce produit qui fait l&#039;unanimit\u00e9 chez tout nos clients ",
+                "link": "http:\/\/localhost:3000\/produit_details.php?id=1"
+            },
+            {
+                "title": "proposez votre recette",
+                "description": "si vous aves une super recette que vous voulez partager avec la communaut\u00e9 , envoyer la moi et je la publirais en votre nom . ",
+                "link": "http:\/\/localhost:3000\/contact.php"
+            }
+        ]
+    },
+    "email_enabled": false,
+    "adresse_enabled": false,
+    "phone_enabled": false,
+    "adresse": "69 rue du garde \u00e0 vous. 75001 Paris cedex"
+}

@@ -1,0 +1,78 @@
+Pour protéger les pages accessibles uniquement aux utilisateurs connectés, 
+ajoutez ce code au début des fichiers protégés :
+
+Exemple pour admin/admin.php:
+// Vérification du rôle (admin uniquement)
+if (!isset($_SESSION['user']) || !is_array($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+    // Redirection vers la page de connexion
+    header('Location: ../login.php');
+    exit();
+}
+
+
+////////////////////
+
+nom     mp     role 
+
+herve  1982    admin
+
+admin admin1234 admin
+
+////////////////////
+
+
+
+<form method="POST" action="admin_header.php" class="toggle-blog">
+                            <label for="commentaires_enabled">
+                                Activer les commentaires :
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                id="commentaires_enabled" 
+                                name="commentaires_enabled" 
+                                <?php echo $siteSettings['commentaires_enabled'] ? 'checked' : ''; ?>
+                                onchange="this.form.submit()">
+                        </form>
+
+
+
+
+
+
+
+
+            admin/admin_about.php 
+                    admin_accueil.php
+                    etc...20 pages
+            assets/
+            css/    23 pages
+            data/ 14 fichiers json
+            includes/
+                    footer.php
+                    functions.php
+                    header.php
+            js/ 3 fichiers js
+            upload/
+            icon.ico
+            about.php
+            account.php
+            blog.php
+            contact.php
+            faq.php
+            forgot_password.php
+            galerie.php
+            index.php
+            login.php
+            logout.php
+            mentions_legales.php
+            privacy_policy.php
+            produit_details.php
+            produits.php
+            register.php
+            robots.txt
+            send_message.php
+            services.php
+            sitemap.xml
+            tarifs.php
+option: page trifs, galerie, blog(forum), commentaires.
+options affichache des details produits avant ou apres le description 

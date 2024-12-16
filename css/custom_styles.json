@@ -1,0 +1,10 @@
+{
+    "title-color": "#262424",
+    "dark-color": "#828181",
+    "light-color": "#f4f4f4",
+    "header-bg-color": "background: linear-gradient(90deg, #fa000c 0%, #090979 35%, #00d4ff 100%);",
+    "footer-bg-color": "linear-gradient(90deg, #007bff, #6610f2)",
+    "footer-border-top": "#007bff",
+    "body-bg-color": "linear-gradient(to right, #f8f9fa, #e9ecef)",
+    "hero-bg-color": "linear-gradient(to bottom, #007bff, #0056b3)"
+}

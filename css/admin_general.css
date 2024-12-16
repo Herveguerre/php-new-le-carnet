@@ -1,0 +1,116 @@
+
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: inline-block;
+    
+}
+
+
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.current-logo {
+    max-width: 150px;
+    margin: 10px 0;
+    display: block;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+.gestion-commentaires {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gestion-commentaires h2,
+.gestion-commentaires h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.commentaires-list {
+    list-style: none;
+    padding: 0;
+}
+
+.commentaires-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.commentaires-list li strong {
+    color: #555;
+}
+
+form {
+    margin-top: 10px;
+}
+
+form button {
+    padding: 8px 15px;
+    margin-right: 5px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[name="supprimer"] {
+    background: #f44336;
+}
+
+form button:hover {
+    opacity: 0.9;
+}

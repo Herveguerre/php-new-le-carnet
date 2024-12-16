@@ -1,0 +1,58 @@
+{
+    "categories": {
+        "0": {
+            "id": 1,
+            "nom": "plats"
+        },
+        "1": {
+            "id": 2,
+            "nom": "entrées"
+        },
+        "3": {
+            "id": 4,
+            "nom": "desserts"
+        },
+        "4": {
+            "id": 5,
+            "nom": "électroniques"
+        },
+        "5": {
+            "id": 6,
+            "nom": "fruits"
+        },
+        "6": {
+            "id": 7,
+            "nom": "poulet"
+        }
+    },
+    "produits": [
+        {
+            "id": 1,
+            "nom": "p1",
+            "description": "erqyh eqryh ",
+            "categorie_id": 1,
+            "prix": 0,
+            "details": [
+                "dfh",
+                "dh",
+                "ryt"
+            ],
+            "link": "https:\/\/www.epson.fr\/fr_FR\/produits\/imprimantes\/inkjet\/grand-public\/ecotank-et-2820\/p\/30171",
+            "image": "..\/upload\/linkedin (1).png"
+        },{
+            "id": 2,
+            "nom": "p2",
+            "description": "erqyh eqryh ",
+            "categorie_id": 1,
+            "prix": 0,
+            "details": [
+                "dfh",
+                "dh",
+                "ryt"
+            ],
+            "link": "",
+            "image": "..\/upload\/linkedin (1).png"
+        }
+    ],
+    "commentaires": []
+}

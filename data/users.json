@@ -1,0 +1,23 @@
+[
+    {
+        "username": "admin",
+        "password": "$2y$12$fOMJVk2tQvYqjVOe1CQ8G.0vVDxdL19.MA0CdpnphCNDWD\/333jiy",
+        "email": "herveguefrre@hotmail.fr",
+        "phone": "+33612345678",
+        "role": "admin"
+    },
+    {
+        "username": "herve",
+        "password": "$2y$12$pi5q\/cV8lSNMYLi5sbY97ex0Orbk\/Tcq\/o.0CmXxMRenV6tTAM1Ty",
+        "email": "herveguerre@hotmail.fr",
+        "phone": "0616337609",
+        "role": "admin"
+    },
+    {
+        "username": "rv",
+        "password": "$2y$12$zGvEXQQGJ5WWRndlDvd15u\/oD2LMUGzsTgRTVUKb4r8SNSZ7RnxlS",
+        "email": "rv@hotmail.fr",
+        "phone": "0102030405",
+        "role": "user"
+    }
+]

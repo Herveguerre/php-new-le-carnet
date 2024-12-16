@@ -1,0 +1,10 @@
+[
+    {
+        "question": "Qu'est-ce que ce site ?",
+        "answer": "C'est un site de d\u00e9monstration pour g\u00e9rer des FAQ."
+    },
+    {
+        "question": "Comment ajouter une FAQ ?",
+        "answer": "Connectez-vous \u00e0 la page d'administration et ajoutez une nouvelle question et r\u00e9ponse."
+    }
+]
