@@ -246,6 +246,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </section>
 
 <section>
+    <h2>meta description de chaque page</h2>
+    <p style="justify-content: content;" >La meta description est une balise importante, car elle est utilisée pour le référencement du site contenant la page. On recommande d'utiliser cette balise pour améliorer la pertinence des recherches sur la Toile.</p>
     <?php if (!empty($successMessage)): ?>
             <p class="success"><?= $successMessage; ?></p>
         <?php endif; ?>

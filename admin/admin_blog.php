@@ -77,10 +77,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ancien_nom'], $_POST[
 }
 
 // Gestion de la validation automatique
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['toggle_auto_validate'])) {
-    $settings['auto_validate'] = !$settings['auto_validate'];
-    file_put_contents($settingsFile, json_encode($settings, JSON_PRETTY_PRINT));
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Validation automatique
+    if (isset($_POST['toggle_auto_validate'])) {
+        $settings['auto_validate'] = !$settings['auto_validate'];
+        file_put_contents($settingsFile, json_encode($settings, JSON_PRETTY_PRINT));
+
+        $success = $settings['auto_validate'] ? "Validation automatique activée." : "Validation automatique désactivée.";
+    }
+
+    // Valider ou supprimer un message
+    if (isset($_POST['salon'], $_POST['index'], $_POST['action'])) {
+        $salon = $_POST['salon'];
+        $index = (int) $_POST['index'];
+
+        if ($_POST['action'] === 'validate') {
+            validerMessage($blogData, $salon, $index);
+            $success = "Le message a été validé avec succès.";
+        } elseif ($_POST['action'] === 'delete') {
+            supprimerMessage($blogData, $salon, $index);
+            $success = "Le message a été supprimé.";
+        }
+
+        file_put_contents($blogFile, json_encode($blogData, JSON_PRETTY_PRINT));
+    }
 }
+
+// Validation automatique en action
+if ($settings['auto_validate']) {
+    foreach ($blogData as $salon => &$messages) {
+        foreach ($messages as &$msg) {
+            if (empty($msg['validated'])) {
+                $msg['validated'] = true;
+            }
+        }
+    }
+    unset($messages);
+    file_put_contents($blogFile, json_encode($blogData, JSON_PRETTY_PRINT));
+}
+
 ob_end_flush();
 ?>
 
@@ -99,11 +134,12 @@ ob_end_flush();
         <h1>Gestion du Forum</h1>
 
         <!-- Bouton pour activer/désactiver la validation automatique -->
-        <form   method="POST" class="auto-validate-toggle">
-            <button type="submit" name="toggle_auto_validate">
-                Validation automatique : <?= $settings['auto_validate'] ? 'Activée' : 'Désactivée' ?>
-            </button>
-        </form>
+        <form method="POST" class="auto-validate-toggle">
+    <button type="submit" name="toggle_auto_validate">
+        <?= $settings['auto_validate'] ? 'Désactiver' : 'Activer' ?> la validation automatique
+    </button>
+</form>
+
 
         <div class="tabs">
             <?php foreach ($blogData as $salon => $messages): ?>
@@ -123,7 +159,7 @@ ob_end_flush();
                             <li>
                                 <strong><?= htmlspecialchars($msg['username']) ?> :</strong>
                                 <?= htmlspecialchars($msg['message']) ?>
-                                <small>(<?= date('d/m/Y H:i', $msg['timestamp']) ?>)</small>
+                                
                                 <form method="POST" class="admin-actions">
                                     <input type="hidden" name="salon" value="<?= htmlspecialchars($salon) ?>">
                                     <input type="hidden" name="index" value="<?= $index ?>">

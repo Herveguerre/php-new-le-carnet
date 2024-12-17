@@ -150,6 +150,22 @@ main h1 {
     color: #999;
     font-size: 0.9rem;
 }
+.success, .error {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    color: #155724;
+    background-color: #d4edda;
+}
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+}
 
 /* Animations */
 @keyframes fadeIn {

@@ -14,14 +14,6 @@ $config = getSiteConfig();
     exit;
  }
 
-// Vérification de la session utilisateur
-//  if (!isset($_SESSION['user'])) {
-//      echo "<p>Vous n'êtes pas connecté.</p>";
-//      exit;
-//  } else {
-//      echo "<p>Bienvenue, " . htmlspecialchars($_SESSION['user']['username']) . ".</p>";
-//      echo "<p>Rôle : " . htmlspecialchars($_SESSION['user']['role']) . ".</p>";
-//  }
 
 // Charger les données des salons depuis le fichier JSON
 $blogFile = 'data/blog.json';
@@ -41,6 +33,7 @@ if (empty($blogData) || !is_array($blogData)) {
 }
 
 // Gestion de l'envoi d'un message
+// Gestion de l'envoi d'un message
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['salon'], $_POST['message'])) {
     // Vérifier si l'utilisateur est connecté
     if (isset($_SESSION['user']['username'])) {
@@ -49,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['salon'], $_POST['mess
         header('Location: /login.php');
         exit;
     }
-    
 
     // Récupérer les données du formulaire
     $salon = $_POST['salon'];
@@ -67,11 +59,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['salon'], $_POST['mess
 
         // Enregistrer les données mises à jour dans le fichier JSON
         file_put_contents($blogFile, json_encode($blogData, JSON_PRETTY_PRINT));
-        $success = "Votre message a été envoyé et sera visible après validation.";
+
+        // Ajouter un message de succès dans la session
+        $_SESSION['success'] = "Votre message a été envoyé et sera visible après validation.";
+
+        // Rediriger vers la même page pour éviter la répétition du POST
+        header('Location: /blog.php');
+        exit;
     } else {
         $error = "Erreur lors de l'envoi du message.";
     }
 }
+
 
 ob_end_flush();
 ?>
@@ -87,6 +86,15 @@ ob_end_flush();
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
+    <?php if (isset($_SESSION['success'])): ?>
+    <p class="success"><?= $_SESSION['success'] ?></p>
+    <?php unset($_SESSION['success']); ?>
+<?php endif; ?>
+
+<?php if (isset($error)): ?>
+    <p class="error"><?= $error ?></p>
+<?php endif; ?>
+
     <main>
         <h1>Forum</h1>
 
@@ -140,7 +148,7 @@ ob_end_flush();
                                     <li>
                                         <strong><?= htmlspecialchars($msg['username']) ?> :</strong>
                                         <?= htmlspecialchars($msg['message']) ?>
-                                        <small>(<?= date('d/m/Y H:i', $msg['timestamp']) ?>)</small>
+                                    <!--utile l 100-->
                                     </li>
                                 <?php endif; ?>
                             <?php endforeach; ?>

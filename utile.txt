@@ -76,3 +76,25 @@ admin admin1234 admin
             tarifs.php
 option: page trifs, galerie, blog(forum), commentaires.
 options affichache des details produits avant ou apres le description 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+admin_blog.php     <small>(<?= date('d/m/Y H:i', $msg['timestamp']) ?>)</small>
