@@ -117,6 +117,7 @@ $produitsFiltres = array_filter($dataProduits['produits'], function ($produit) u
 <?php include 'admin_header.php'; ?>
 <main>
     <h1>Administration des Produits</h1>
+    <a class="border" href="admin_categories.php">Gestion des Catégories</a>
 
     <!-- Formulaire d'ajout/modification -->
     <div class="formulaire">
