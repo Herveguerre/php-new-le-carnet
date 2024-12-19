@@ -15,17 +15,34 @@ body {
     text-align: center;
     justify-content: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #007bff, #0056b3);
-    color: white;
+    background: linear-gradient(90deg, #E8E0D7, #D2C1AE);
+    background-image: url(../upload/Le\ carnet.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+min-height: 570px;
+    color: rgb(54, 52, 52);
     animation: fadeIn 2s ease-in-out;
     margin: 20px auto;
     border-radius: 10px;
+    justify-content: center; 
+    display: flex;
+    flex-direction: column;
 }
 
 .hero h2 {
-    margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    height: 100%; /* Nécessaire pour définir la hauteur à centrer */
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
 }
+
 
 .hero .opening-hours {
     font-style: italic;
@@ -42,6 +59,7 @@ body {
 .features h2 {
     margin-bottom: 20px;
     font-size: 2rem;
+   
 }
 
 .features .cards {

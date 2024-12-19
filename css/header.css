@@ -15,7 +15,7 @@ body {
 header {
     background: linear-gradient(90deg, #E8E0D7, #D2C1AE);
     background-color: var(--header-bg-color);
-    color: white;
+    
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -61,7 +61,7 @@ nav ul {
 
 nav ul li a {
     text-wrap: nowrap;
-    color: white;
+    color: #565353;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -144,7 +144,7 @@ nav ul li a:hover {
         top: 0;
         left: 0;
         width: 100%;
-        background: linear-gradient(90deg, #007bff, #6610f2);
+        background: linear-gradient(90deg, #E8E0D7, #D2C1AE);
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
         padding: 20px;
         transition: transform 0.3s ease;

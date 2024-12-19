@@ -10,7 +10,7 @@
     "commentaires_enabled": true,
     "hero_images_enabled": false,
     "tarifs_enabled": false,
-    "opening_hours": "lundi au vendredi \r\nde 9h \u00e0 12h \r\net de 13h30 \u00e0 19h ",
+    "opening_hours": "",
     "socials": [
         {
             "name": "facebook",
