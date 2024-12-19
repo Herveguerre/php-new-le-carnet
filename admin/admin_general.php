@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $data['address'] = htmlspecialchars($_POST['address']);
                 $data['phone'] = htmlspecialchars($_POST['phone']);
 
-                $data['description_site'] = htmlspecialchars($_POST['description_site']);
+                
 
                 // Gestion du logo
                 if (isset($_FILES['logo']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
