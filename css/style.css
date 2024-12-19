@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 :root{
-    --title-color: #262424;
-    --dark-color: #828181;
-    --light-color: #f4f4f4;
+    --title-color: #333;
+    --dark-color: #666;
+    --bg: #b0a291;
+    --hover: #b0a291;
     --header-bg-color:linear-gradient(90deg, #007bff, #6610f2);
     --footer-bg-color:linear-gradient(90deg, #007bff, #6610f2);
     --footer-border-top: #007bff;
