@@ -236,13 +236,13 @@ main {
 }
 
 .commentaires p a {
-    color: #007bff;
+    color: #666;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 .commentaires p a:hover {
-    color: #0056b3;
+    color: var(--hover);
 }
 @media screen and (max-width: 768px) {
     .produit-details {
