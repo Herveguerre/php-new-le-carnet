@@ -46,7 +46,7 @@ if (isset($_GET['message']) && $_GET['message'] === 'deleted') {
     
     <main>       
     <section class="hero">
-        <h2 style="color: #333;" >Bienvenue sur <?= htmlspecialchars($data['site_name']) ?></h2>
+        <h2 style="color: #333;" >Bienvenue sur <br> <?= htmlspecialchars($data['site_name']) ?></h2>
 
         <?php if ($config['adresse_enabled'] ?? false): ?>
             <p>Adresse : <?= htmlspecialchars($data['address']) ?></p> 
