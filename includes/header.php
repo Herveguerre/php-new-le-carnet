@@ -22,24 +22,7 @@ $meta_description = $metaData[$current_page]['meta_description'] ?? "Description
 $page_title = $metaData[$current_page]['title'] ?? "Titre par défaut";
 ?>
 <link rel="stylesheet" href="../css/header.css">
-<style>
-        :root {
-            <?php foreach ($custom_styles as $key => $value): ?>
-                --<?= htmlspecialchars($key) ?>: <?= htmlspecialchars($value) ?>;
-            <?php endforeach; ?>
-        }
-        body {
-            background-color: var(--body-bg-color, #f8f9fa); /* Valeur par défaut */
-            color: var(--dark-color, #262424);
-        }
-        header {
-            background: var(--header-bg-color);
-        }
-        footer {
-            background: var(--footer-bg-color);
-            border-top: 5px solid var(--footer-border-top);
-        }
-</style>
+
 
 <header>
 <meta name="description" content="<?= htmlspecialchars($meta_description) ?>">

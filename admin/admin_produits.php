@@ -95,6 +95,8 @@ $produitsFiltres = array_filter($dataProduits['produits'], function ($produit) u
 
 
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">

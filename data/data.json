@@ -5,11 +5,11 @@
     "phone": "02 39 70 82 56",
     "logo": "logo.png",
     "description_site": "",
-    "blog_enabled": true,
+    "blog_enabled": false,
     "galerie_enabled": true,
     "commentaires_enabled": true,
     "hero_images_enabled": false,
-    "tarifs_enabled": true,
+    "tarifs_enabled": false,
     "opening_hours": "lundi au vendredi \r\nde 9h \u00e0 12h \r\net de 13h30 \u00e0 19h ",
     "socials": [
         {
