@@ -13,7 +13,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(90deg, #007bff, #6610f2);
+    background: linear-gradient(90deg, #E8E0D7, #D2C1AE);
     background-color: var(--header-bg-color);
     color: white;
     padding: 1rem 2rem;
